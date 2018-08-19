@@ -1,9 +1,10 @@
 # cucumber-serenity-restassured
 This is a Rest Assured BDD framework for AFC API test automation. Took the approach of BDD along with Rest Assured in order to ensure that the specifications are testable. When the features/scenarios are written in Gherkin and glued with step defnitions, it provideds an executable one source of truth.
+
 Chosen Cucumber for its rich implementation of the Behavior Driven Development model. Integration with Serenity provides both out of the box Rest-Assured methods and an Aggregate report to make sure that the framework is scalable.
 Rest-Assured as an API testing library provides wide array of choices for test developers with both groovy and java libraries. Choesn Java to build the framework.
-Currently framework lacks reusable custom base library and helper methods for better reusability. A couple utility/helper classes will serve the purpose by moving all the RestAssured setbaseURI,basePath,Headers, etc and the Response/JSON parsing by encapsulating in a helper class.
-Besides logger needs to be added. Currently only the request is logged.
+
+Currently framework lacks reusable custom base library and helper methods for better reusability. A couple utility/helper classes will serve the purpose by moving all the RestAssured setbaseURI,basePath,Headers, etc and the Response/JSON parsing by encapsulating in a helper class. Besides logger needs to be added. Currently only the request is logged in Console.
 Also the Serentiy report doesn't print the 'Rest Query' which needs to be investigated.
 
 # Run Instructions:
