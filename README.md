@@ -35,6 +35,7 @@ Features->Scennarios->Step Defnitions->RestTestLib->Custom Helper Classes
 
 
 #Test Coverage
+--------------
 
 How much do you test? What scenarios do you test?
 -------------------------------------------------
@@ -50,6 +51,7 @@ Also I'll segregate the tests based on 'pre-integration' and 'integration-tests'
 Continuous Testing with the aid of integration to CI/CD will provide the team a visibility. So it's mandatory to integrate the tests in pipeline.
 
 #Factors
+-------
 
 What factors would you consider to ensure you get the widest end-to-end coverage, AND yet keep it easy to maintain?
 ------------------------------------------------------------------------------------------------------------------
