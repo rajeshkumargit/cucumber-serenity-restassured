@@ -16,7 +16,7 @@ Run it as 'mvn clean verify' from the project dir
 # Automation Strategy 
 This framework needs to be scaled to cater to the entire API testing of the Adam's Fried Chicken microservices.
 # Approach
-##(How would you scale out your answer in the first task to cover an entire system? Would there be tweaks?)
+(How would you scale out your answer in the first task to cover an entire system? Would there be tweaks?)
 Currently the framework adheres to a BDD model:
 ------------------------------------------------
 Features->Scennarios->Step Defnitions->RestTestLib
@@ -35,7 +35,9 @@ Features->Scennarios->Step Defnitions->RestTestLib->Custom Helper Classes
 
 
 #Test Coverage
-##How much do you test? What scenarios do you test?
+
+How much do you test? What scenarios do you test?
+-------------------------------------------------
 Test scenarios
 Though every microservice is an independent entity, still it needs to be tested for integration. I'll identify the tests with the following approach:
 1. End-to-End test testing of the data flow between various services and its different request/responses. This could achieved by creating the Features/Scenarios from Cucumber and writing step defnitions and further steps to call the API layer.
@@ -48,7 +50,9 @@ Also I'll segregate the tests based on 'pre-integration' and 'integration-tests'
 Continuous Testing with the aid of integration to CI/CD will provide the team a visibility. So it's mandatory to integrate the tests in pipeline.
 
 #Factors
-##What factors would you consider to ensure you get the widest end-to-end coverage, AND yet keep it easy to maintain?
+
+What factors would you consider to ensure you get the widest end-to-end coverage, AND yet keep it easy to maintain?
+------------------------------------------------------------------------------------------------------------------
 1. Backgrounds and Sceanrio Outlines - In the feature files in Cucumber Gherkin, this brings the reusability to the fore
 2. Step Defintions Reusability- Reusing the step defintions this trickles down from the Backgrounds and Sceanrio Outlines in Feature files
 3. Building reusable utility/helper classes which could be API Specific, Project related and common methods for entire REST architecture
