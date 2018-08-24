@@ -1,5 +1,5 @@
 # cucumber-serenity-restassured
-This is a Rest Assured BDD framework for AFC API test automation. Took the approach of BDD along with Rest Assured in order to ensure that the specifications are testable. When the features/scenarios are written in Gherkin and glued with step defnitions, it provideds an executable one source of truth.
+This is a Rest Assured BDD framework for API test automation. Took the approach of BDD along with Rest Assured in order to ensure that the specifications are testable. When the features/scenarios are written in Gherkin and glued with step defnitions, it provideds an executable one source of truth.
 
 Chosen Cucumber for its rich implementation of the Behavior Driven Development model. Integration with Serenity provides both out of the box Rest-Assured methods and an Aggregate report to make sure that the framework is scalable.
 Rest-Assured as an API testing library provides wide array of choices for test developers with both groovy and java libraries. Choesn Java to build the framework.
@@ -15,9 +15,8 @@ Run it as 'mvn clean verify' from the project dir
 /target/site/reports
 
 # Automation Strategy 
-This framework needs to be scaled to cater to the entire API testing of the Adam's Fried Chicken microservices.
+This framework needs to be scaled to cater to the entire API testing of your application
 # Approach
-(How would you scale out your answer in the first task to cover an entire system? Would there be tweaks?)
 Currently the framework adheres to a BDD model:
 ------------------------------------------------
 Features->Scennarios->Step Defnitions->RestTestLib
@@ -37,9 +36,6 @@ Features->Scennarios->Step Defnitions->RestTestLib->Custom Helper Classes
 
 #Test Coverage
 --------------
-
-How much do you test? What scenarios do you test?
--------------------------------------------------
 Test scenarios
 Though every microservice is an independent entity, still it needs to be tested for integration. I'll identify the tests with the following approach:
 1. End-to-End test testing of the data flow between various services and its different request/responses. This could achieved by creating the Features/Scenarios from Cucumber and writing step defnitions and further steps to call the API layer.
@@ -51,11 +47,8 @@ Also I'll segregate the tests based on 'pre-integration' and 'integration-tests'
 
 Continuous Testing with the aid of integration to CI/CD will provide the team a visibility. So it's mandatory to integrate the tests in pipeline.
 
-#Factors
--------
-
-What factors would you consider to ensure you get the widest end-to-end coverage, AND yet keep it easy to maintain?
-------------------------------------------------------------------------------------------------------------------
+#Factors to consider
+----------------------
 1. Backgrounds and Sceanrio Outlines - In the feature files in Cucumber Gherkin, this brings the reusability to the fore
 2. Step Defintions Reusability- Reusing the step defintions this trickles down from the Backgrounds and Sceanrio Outlines in Feature files
 3. Building reusable utility/helper classes which could be API Specific, Project related and common methods for entire REST architecture
@@ -64,9 +57,3 @@ What factors would you consider to ensure you get the widest end-to-end coverage
 6. Meeting the Agile sprint testing goals through Automation
 7. Working in tandem with GUI automation where required (For example., Creating Synthetic data and Deleting it as part of the Tear down exercises using API tests)
 8. Providing feedback by leverging email plugins in CI/CD platform to keep the stakeholders posted on the test results
-
-
-
-
-
-
